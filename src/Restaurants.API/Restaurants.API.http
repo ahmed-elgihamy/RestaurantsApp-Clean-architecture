@@ -1,0 +1,109 @@
+@host = http://localhost
+@port = 5253
+@token = CfDJ8CEu9TLzBQJPh11E23JC95EHZOPODjx-Nb2LW2QEDHNn8j3nJ-Stz_Y_JfWEPlesUSLOdzsVBLrIYbfHE5lra36MLBnPKyI_qsZKsnQWeFiGvOG36Kp9cCyDL8RmTsNv61upcQKVHyX-xMT-fvt-nSpIcHVyGkt0xj0qCC9fA-VoSL3ntH0i5OuhZn6EkJIf8Ou9Rnp7_4qKOa_FQncIrCGuF6Aag100Pp5K104p5kxdlzWb2V0P59YCGWJjOAFyVE9dAEBvRo6Og48CyUVuydTKzoPVgoVKvMccD3tOw2tWN2iKfPTJAOPCiQZ6drR8U7uhm-OzEy6NGW1z1PCJJ7Nq9pkynukcWBFm_NjrCWb4M6qTwnfZup5DoIuvFpcjUx7qQ89ygh9pr04vHR-1p_JKNsBnDpwk52iJvPWml9HenqetH8LWQuO6SZFLUFCGkqWKnMwIABdnm8DKNBcIRFgEnkc70oQcCgsjcJlIs20atk6FuzLJiSPH20fjqmXfmNa2buDgk3IDT-8peCsENQQICz6ZxE7tIn5eVOyK4VffY3eCKZkeYK2ZKV7v1FduF29ODA7DjNc8q6gL9m-Z_1uhwMdkoBpllBKCBGpbENhIJwVu0IKjYuXV2pMVDju8h_XPAi_RHA97ZxFYEZGqcXfjbSTb0WSBm6b4GxfB2ETQwkDVzxBJ1wJCMXAVAGqHMAelPVnNXMr4jrW2ofIxbunt7N5O3bd9kYwq1PqhoDWNrXk9nM4t9K8UHs_DblDOQlMEt_dQcrsvIz6lfXTn8pL0uFBMttbcKKY3t9P_824n
+
+@baseUrl = {{host}}:{{port}}
+GET {{Restaurants.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+
+GET http://localhost:5253/api/restaurant?searchPhrase=lolo
+Authorization: Bearer {{token}}
+
+###
+
+@id=0
+GET {{Restaurants.API_HostAddress}}/api/restaurant/2
+Authorization: Bearer {{token}}
+
+###
+
+POST {{Restaurants.API_HostAddress}}/api/restaurant
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+   "name": "Restaurant Owner",
+  "description": "Traditional Egyptian flavors made fresh daily.",
+  "category": "Italian",
+  "hasDelivery": true,
+  "contactEmail": "ahmed@gmail.com",
+  "contactNumber": "484888878748",
+  "city": "Alexandria",
+  "street": "Stanley Bridge",
+  "postalCode": "21-311"
+} 
+
+###
+
+DELETE {{Restaurants.API_HostAddress}}/api/restaurant/15
+
+###
+
+PATCH {{Restaurants.API_HostAddress}}/api/restaurant/14484
+Content-Type: application/json
+
+{
+  "name": "lolo",
+  "description": "Traditional Egyptian flavors made fresh daily.",
+  "hasDelivery": true
+  
+}
+
+###
+
+POST {{Restaurants.API_HostAddress}}/api/Restaurant/3/Dishes
+Content-Type: application/json
+
+{
+        "name": "ddCalifornia Roll",
+        "description": "Crab, avocado, cucumber",
+        "price": 150.00,
+}
+
+
+
+###
+
+POST {{Restaurants.API_HostAddress}}/api/restaurant/1/Dishes
+Content-Type: application/json
+
+{
+  //CreateDishCommend
+}
+
+###
+
+POST {{Restaurants.API_HostAddress}}/api/restaurant/2/dishes
+Content-Type: application/json
+
+{
+       
+      
+        "name": "Grilled Chickennnn",
+        "description": "Served with vegetables and garlic sauce",
+        "price":,
+        "kiloCalories": 2 
+
+}
+
+###
+
+POST {{Restaurants.API_HostAddress}}/api/identity/register
+Content-Type: application/json
+
+{
+        "email": "testUser22@gmail.com",
+        "password":"Password1!"
+}
+###
+
+POST {{baseUrl}}/api/identity/login
+Content-Type: application/json
+
+{
+        "email": "owner@gmail.com",
+        "password":"Password1!"
+}
