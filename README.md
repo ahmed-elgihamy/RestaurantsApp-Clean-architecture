@@ -29,8 +29,8 @@ Swagger for API Documentation
 
 
 API Documentation
-The API is documented using Swagger, which provides a detailed overview of all available endpoints. You can access the Swagger UI at https://localhost:5001/swagger when the project is running.
-Below is a screenshot of the Swagger API Documentation:
+The API is documented using Swagger, which provides a detailed overview of all available endpoints. You can access the Swagger UI 
+
 
 API Endpoints
 
